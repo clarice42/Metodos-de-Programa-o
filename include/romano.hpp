@@ -1,3 +1,0 @@
-/*
-declaracao de funcoes neste arquivo
-*/
