@@ -1,6 +1,6 @@
 // Copyright 2019 Clara Resende
 #include <stdio.h>
-#include "include/romano.h"
+#include "romano.hpp"
 int main() {
     char numero[30];
     int i;

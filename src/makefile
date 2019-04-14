@@ -5,6 +5,7 @@ CFLAGS=-I$(IDIR)
 GOOGLE_TEST_INCLUDE = /usr/local/lib/libgtest.a
 ODIR=obj
 LDIR =../lib
+TEST=teste
 LD_FLAGS = -fPIC -O2 -g -lpthread
 
 LIBS=-lm
@@ -21,8 +22,8 @@ $(ODIR)/%.o: %.cpp $(DEPS)
 romano: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
 
-testa_romano.o: romano.o
-	$(CC)./romano.o $(GOOGLE_TEST_INCLUDE) -o $@ $(LD_FLAGS) 
+testa_romano: $(TEST)/testa_romano.cpp $(ODIR)/romano.o 
+	$(CC) $< $(ODIR)/romano.o $(GOOGLE_TEST_INCLUDE) -o $@ $(CFLAGS) $(LD_FLAGS) 
 
 .PHONY: clean
 
