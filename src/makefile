@@ -21,8 +21,8 @@ $(ODIR)/%.o: %.cpp $(DEPS)
 romano: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
 
-testa_romano.o: $(ODIR)/romano.o
-	$(CC) $< $(ODIR)/romano.o $(GOOGLE_TEST_INCLUDE) -o $@ $(LD_FLAGS) 
+testa_romano.o: romano.o
+	$(CC)./romano.o $(GOOGLE_TEST_INCLUDE) -o $@ $(LD_FLAGS) 
 
 .PHONY: clean
 
