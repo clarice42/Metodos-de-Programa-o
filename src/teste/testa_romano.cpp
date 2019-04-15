@@ -32,6 +32,26 @@ TEST(somaRomano, soma){
     EXPECT_EQ(2722, soma_romano(vetor_teste8));
 }
 
+TEST(somaRomano, subtracao){
+    int vetor_teste1[] = {1, 5, 0};
+    int vetor_teste2[] = {1000, 100, 500, 10, 100, 1, 10, 0};
+    int vetor_teste3[] = {1000, 1000, 100, 100, 100, 10, 50, 1, 5, 0};
+    int vetor_teste4[] = {1000, 1000, 100, 1000, 10, 100, 1, 10, 0};
+    int vetor_teste5[] = {1000, 100, 1000, 10, 100, 1, 10, 0};
+    int vetor_teste6[] = {10, 50, 1, 10, 0};
+    int vetor_teste7[] = {500, 100, 100, 1, 10, 0};
+    int vetor_teste8[] = {10, 100, 1, 5, 0};
+
+    EXPECT_EQ(4, soma_romano(vetor_teste1));
+    EXPECT_EQ(1499, soma_romano(vetor_teste2));
+    EXPECT_EQ(2344, soma_romano(vetor_teste3));
+    EXPECT_EQ(2999, soma_romano(vetor_teste4));
+    EXPECT_EQ(1999, soma_romano(vetor_teste5));
+    EXPECT_EQ(49, soma_romano(vetor_teste6));
+    EXPECT_EQ(709, soma_romano(vetor_teste7));
+    EXPECT_EQ(94, soma_romano(vetor_teste8));
+}
+
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
