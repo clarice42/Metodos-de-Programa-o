@@ -1,4 +1,5 @@
 // Copyright 2019 Clara Resende
+
 #include "gtest/gtest.h"
 #include "romano.hpp"
 
@@ -12,7 +13,7 @@ TEST(converteTeste, comparandoLetras) {
     EXPECT_EQ(1000, converte('M'));
 }
 
-TEST(somaRomano, soma){
+TEST(somaRomano, soma) {
     int vetor_teste1[] = {1, 1, 1, 0};
     int vetor_teste2[] = {5, 1, 1, 1, 0};
     int vetor_teste3[] = {10, 10, 5, 1, 0};
@@ -32,7 +33,7 @@ TEST(somaRomano, soma){
     EXPECT_EQ(2722, soma_romano(vetor_teste8));
 }
 
-TEST(somaRomano, subtracao){
+TEST(somaRomano, subtracao) {
     int vetor_teste1[] = {1, 5, 0};
     int vetor_teste2[] = {1000, 100, 500, 10, 100, 1, 10, 0};
     int vetor_teste3[] = {1000, 1000, 100, 100, 100, 10, 50, 1, 5, 0};
@@ -52,6 +53,11 @@ TEST(somaRomano, subtracao){
     EXPECT_EQ(94, soma_romano(vetor_teste8));
 }
 
+TEST(excecoesTeste, numerosInvalidos){
+    EXPECT_EQ(-1, verifica_excecao("XXXX"));
+    EXPECT_EQ(-1, verifica_excecao("LL"));
+    EXPECT_EQ(-1, verifica_excecao("MMMM"));
+    }
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
