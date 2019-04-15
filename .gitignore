@@ -1,2 +1,6 @@
 #arquivos .bin
 *.bin
+#ignorar arquivos .ipch
+*.ipch
+#ignorar executaveis.o
+*.o
