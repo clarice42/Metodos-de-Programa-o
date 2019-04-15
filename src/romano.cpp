@@ -4,7 +4,7 @@
 #include "romano.hpp"
 int main() {
     char numero_romano[30];
-    int i, numero_correspondente[30];
+    int i, numero_correspondente[30], soma = 0;
     scanf("%s", numero_romano);
     i=0;
     while((numero_romano[i] != '\0')&&(numero_romano[i] != '\n')) {
@@ -12,6 +12,7 @@ int main() {
         i++;
     }
     numero_correspondente[i++] = 0;
-    soma_romano(numero_correspondente);
+    soma = soma_romano(numero_correspondente);
+    printf("%d", soma);
     return 0;
 }

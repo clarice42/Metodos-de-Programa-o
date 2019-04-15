@@ -12,6 +12,26 @@ TEST(converteTeste, comparandoLetras) {
     EXPECT_EQ(1000, converte('M'));
 }
 
+TEST(somaRomano, soma){
+    int vetor_teste1[] = {1, 1, 1, 0};
+    int vetor_teste2[] = {5, 1, 1, 1, 0};
+    int vetor_teste3[] = {10, 10, 5, 1, 0};
+    int vetor_teste4[] = {50, 10, 10, 10, 5, 0};
+    int vetor_teste5[] = {100, 100, 100, 50, 5, 1, 1, 1, 0};
+    int vetor_teste6[] = {500, 100, 1, 1, 0};
+    int vetor_teste7[] = {1000, 100, 100, 5, 0};
+    int vetor_teste8[] = {1000, 1000, 500, 100, 100, 10, 10, 1, 1, 0};
+
+    EXPECT_EQ(3, soma_romano(vetor_teste1));
+    EXPECT_EQ(8, soma_romano(vetor_teste2));
+    EXPECT_EQ(26, soma_romano(vetor_teste3));
+    EXPECT_EQ(85, soma_romano(vetor_teste4));
+    EXPECT_EQ(358, soma_romano(vetor_teste5));
+    EXPECT_EQ(602, soma_romano(vetor_teste6));
+    EXPECT_EQ(1205, soma_romano(vetor_teste7));
+    EXPECT_EQ(2722, soma_romano(vetor_teste8));
+}
+
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();

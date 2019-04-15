@@ -17,15 +17,20 @@ int converte(char letra) {
     if (letra == 'M')
         return 1000;
 }
-void soma_romano(int vetor[]) {
-    int i = 0, soma = 0;
+int soma_romano(int vetor[]) {
+    int i = 0, soma = 0, aviso = 0, onde = 0;
     while(vetor[i] != 0){
-        if(vetor[i] >= vetor[i++]){
-            soma = vetor[i] + vetor[i++];
-        }
-        else{
-            soma = vetor[i++] - vetor[i];
+        if(vetor[i] < vetor[i++]){
+            aviso = 1;
+            onde = i;
         }
     }
-    printf("%d\n", soma);
+    if(aviso == 0){
+        i= 0;
+        while(vetor[i] != 0){
+            soma += vetor[i];
+            i++;
+        }
+    }
+    return soma;
 }
