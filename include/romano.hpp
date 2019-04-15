@@ -1,7 +1,5 @@
 // Copyright 2019 Clara Resende
-#ifndef ROMANO_HPP
-#define ROMANO_HPP
-
-int converte (char letra);
-
+#ifndef INCLUDE_ROMANO_HPP_
+#define INCLUDE_ROMANO_HPP_
+int converte(char letra);
 #endif

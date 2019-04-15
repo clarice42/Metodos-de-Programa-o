@@ -3,10 +3,9 @@
 int converte(char letra) {
     int valor = 0;
     if (letra == 'I')
-        valor = 1;
+        return 1;
     if (letra == 'V')
-        valor = 5;
+        return 5;
     if (letra == 'X')
-        valor = 10;
-    return valor;
+        return 10;
 }
