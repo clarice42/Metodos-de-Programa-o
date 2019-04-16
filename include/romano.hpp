@@ -3,5 +3,6 @@
 #define INCLUDE_ROMANO_HPP_
 int converte(char letra);
 int soma_romano(int vetor[]);
-int verifica_excecao(char vetor[]);
+int verifica_excecao1(char vetor[]);
+int verifica_excecao2(int vetor[]);
 #endif

@@ -54,10 +54,16 @@ TEST(somaRomano, subtracao) {
 }
 
 TEST(excecoesTeste, numerosInvalidos){
-    EXPECT_EQ(-1, verifica_excecao("XXXX"));
-    EXPECT_EQ(-1, verifica_excecao("LL"));
-    EXPECT_EQ(-1, verifica_excecao("MMMM"));
-    }
+    char string1[] = "XXXX";
+    char string2[] = "XLDD";
+    char string3[] = "MMVV";
+    char string4[] = "IXLL";
+    EXPECT_EQ(-1, verifica_excecao1(string1));
+    EXPECT_EQ(-1, verifica_excecao1(string2));
+    EXPECT_EQ(-1, verifica_excecao1(string3));
+    EXPECT_EQ(-1, verifica_excecao1(string4));
+}
+
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();

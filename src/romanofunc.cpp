@@ -33,28 +33,32 @@ int soma_romano(int vetor[]) {
     }
     return soma;
 }
-int verifica_excecao(char numero[]){
-    int i = 0;
+int verifica_excecao1(char numero[]){
+    int i = 0, retorno = 0;
     while ((numero[i] != '\0') && (numero[i] != '\n')){
         if (numero[i] == numero[i+1]){
             if (numero[i] == 'V' || numero[i] == 'L' || numero[i] == 'D')
-                return -1;   
-            else if ((numero[i+1] == numero[i+2]) && (numero[i+2] == numero[i+3])){
+                retorno = -1;   
+            if ((numero[i+1] == numero[i+2]) && (numero[i+2] == numero[i+3])){
                 if (numero[i] == 'X' || numero[i] == 'I')
-                    return -1;
-                else if (numero[i] == 'C' || numero[i] == 'M')
-                    return -1;
-                else{
-                    return 0;
-                }
+                    retorno = -1;
+                if (numero[i] == 'C' || numero[i] == 'M')
+                    retorno = -1;
             }
-            else {
-                return 0;
-            }
-        }
-        else {
-            return 0;
         }
         i++;
+    }
+    if (retorno == 0)
+        return 0;
+    else{
+        return -1;
+    }
+}
+int verifica_excecao2(int vetor[]) {
+    int i = 0;
+    while (vetor[i] != 0){
+        if (vetor[i] == -1) {
+            return -1;
+        }
     }
 }

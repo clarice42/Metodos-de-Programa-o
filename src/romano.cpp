@@ -16,8 +16,8 @@ int main() {
         }
         i++;
     }
-
-    excecao2 = verifica_excecao(numero_romano);
+    
+    excecao2 = verifica_excecao1(numero_romano);
 
     if ((excecao1 == 0) && (excecao2 ==0)) {
         numero_correspondente[i++] = 0;
