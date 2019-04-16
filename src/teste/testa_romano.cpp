@@ -3,6 +3,7 @@
 #include "gtest/gtest.h"
 #include "romano.hpp"
 
+/* Teste para verificar se as letras foram transformadas nos numeros devidos */
 TEST(converteTeste, comparandoLetras) {
     EXPECT_EQ(1, converte('I'));
     EXPECT_EQ(5, converte('V'));
@@ -12,7 +13,7 @@ TEST(converteTeste, comparandoLetras) {
     EXPECT_EQ(500, converte('D'));
     EXPECT_EQ(1000, converte('M'));
 }
-
+/* Verificar se a soma de numeros como XXX foi feita adequadamente */
 TEST(somaRomano, soma) {
     int vetor_teste1[] = {1, 1, 1, 0};
     int vetor_teste2[] = {5, 1, 1, 1, 0};
@@ -32,7 +33,7 @@ TEST(somaRomano, soma) {
     EXPECT_EQ(1205, soma_romano(vetor_teste7));
     EXPECT_EQ(2722, soma_romano(vetor_teste8));
 }
-
+/* Verificar se a subtracao de numeros como XC esta correta */
 TEST(somaRomano, subtracao) {
     int vetor_teste1[] = {1, 5, 0};
     int vetor_teste2[] = {1000, 100, 500, 10, 100, 1, 10, 0};
@@ -52,8 +53,8 @@ TEST(somaRomano, subtracao) {
     EXPECT_EQ(709, soma_romano(vetor_teste7));
     EXPECT_EQ(94, soma_romano(vetor_teste8));
 }
-
-TEST(excecoesTeste, numerosInvalidos1){
+/* Teste que verifica excecoes do tipo VV ou IIII */
+TEST(excecoesTeste, numerosInvalidos1) {
     char string1[] = "XXXX";
     char string2[] = "XLDD";
     char string3[] = "MMVV";
@@ -63,7 +64,7 @@ TEST(excecoesTeste, numerosInvalidos1){
     EXPECT_EQ(-1, verifica_excecao1(string3));
     EXPECT_EQ(-1, verifica_excecao1(string4));
 }
-
+/* Teste que verifica excecoes do tipo IIK ou VX */
 TEST(excecoesTeste, numerosInvalidos2) {
     int vetor1[] = {1, 5, -1};
     int vetor2[] = {1000, 100, 10, 10, -1};
@@ -74,6 +75,7 @@ TEST(excecoesTeste, numerosInvalidos2) {
     EXPECT_EQ(-1, verifica_excecao2(vetor3));
     EXPECT_EQ(-1, verifica_excecao2(vetor4));
 }
+
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();

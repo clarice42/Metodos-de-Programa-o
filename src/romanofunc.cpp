@@ -18,9 +18,11 @@ int converte(char letra) {
         return 500;
     else if (letra == 'M')
         return 1000;
-    else
+    else  // letras invalidas
         return -1;
 }
+/*Soma se o primeiro numero for maior/igual ao proximo e subtrai 
+  caso contrario*/
 int soma_romano(int vetor[]) {
     int i = 0, soma = 0;
     while (vetor[i] != 0) {
@@ -33,13 +35,14 @@ int soma_romano(int vetor[]) {
     }
     return soma;
 }
-int verifica_excecao1(char numero[]){
+/* Funcao para excecoes do tipo LL e IIII*/
+int verifica_excecao1(char numero[]) {
     int i = 0, retorno = 0;
-    while ((numero[i] != '\0') && (numero[i] != '\n')){
-        if (numero[i] == numero[i+1]){
+    while ((numero[i] != '\0') && (numero[i] != '\n')) {
+        if (numero[i] == numero[i+1]) {
             if (numero[i] == 'V' || numero[i] == 'L' || numero[i] == 'D')
-                retorno = -1;   
-            if ((numero[i+1] == numero[i+2]) && (numero[i+2] == numero[i+3])){
+                retorno = -1;
+            if ((numero[i+1] == numero[i+2]) && (numero[i+2] == numero[i+3])) {
                 if (numero[i] == 'X' || numero[i] == 'I')
                     retorno = -1;
                 if (numero[i] == 'C' || numero[i] == 'M')
@@ -48,15 +51,16 @@ int verifica_excecao1(char numero[]){
         }
         i++;
     }
-    if (retorno == 0)
+    if (retorno == 0) {
         return 0;
-    else{
+    } else {
         return -1;
     }
 }
+/* Funcao para excecoes do tipo WV e LC */
 int verifica_excecao2(int vetor[]) {
     int i = 0, retorno = 0;
-    while (vetor[i] != 0){
+    while (vetor[i] != 0) {
         if (vetor[i] == -1) {
             retorno = -1;
         }
@@ -65,9 +69,9 @@ int verifica_excecao2(int vetor[]) {
         }
         i++;
     }
-    if (retorno == 0)
+    if (retorno == 0) {
         return 0;
-    else {
+    } else {
         return -1;
     }
 }
