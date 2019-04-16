@@ -55,10 +55,19 @@ int verifica_excecao1(char numero[]){
     }
 }
 int verifica_excecao2(int vetor[]) {
-    int i = 0;
+    int i = 0, retorno = 0;
     while (vetor[i] != 0){
         if (vetor[i] == -1) {
-            return -1;
+            retorno = -1;
         }
+        if (vetor[i+1] == (2*vetor[i])) {
+            retorno = -1;
+        }
+        i++;
+    }
+    if (retorno == 0)
+        return 0;
+    else {
+        return -1;
     }
 }

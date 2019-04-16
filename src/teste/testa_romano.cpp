@@ -53,7 +53,7 @@ TEST(somaRomano, subtracao) {
     EXPECT_EQ(94, soma_romano(vetor_teste8));
 }
 
-TEST(excecoesTeste, numerosInvalidos){
+TEST(excecoesTeste, numerosInvalidos1){
     char string1[] = "XXXX";
     char string2[] = "XLDD";
     char string3[] = "MMVV";
@@ -64,9 +64,17 @@ TEST(excecoesTeste, numerosInvalidos){
     EXPECT_EQ(-1, verifica_excecao1(string4));
 }
 
+TEST(excecoesTeste, numerosInvalidos2) {
+    int vetor1[] = {1, 5, -1};
+    int vetor2[] = {1000, 100, 10, 10, -1};
+    int vetor3[] = {5, 10};
+    int vetor4[] = {1, 50, 100};
+    EXPECT_EQ(-1, verifica_excecao2(vetor1));
+    EXPECT_EQ(-1, verifica_excecao2(vetor2));
+    EXPECT_EQ(-1, verifica_excecao2(vetor3));
+    EXPECT_EQ(-1, verifica_excecao2(vetor4));
+}
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
-
-

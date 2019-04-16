@@ -10,19 +10,14 @@ int main() {
     i = 0;
     while ((numero_romano[i] != '\0')&&(numero_romano[i] != '\n')) {
         numero_correspondente[i] = converte(numero_romano[i]);
-        if (numero_correspondente[i] == -1) {
-            excecao1 = -1;
-            break;
-        }
         i++;
     }
-    
-    excecao2 = verifica_excecao1(numero_romano);
-
+    numero_correspondente[i++] = 0;
+    excecao2 = verifica_excecao2(numero_correspondente);
+    excecao1 = verifica_excecao1(numero_romano);
     if ((excecao1 == 0) && (excecao2 ==0)) {
-        numero_correspondente[i++] = 0;
         soma = soma_romano(numero_correspondente);
-        printf("%d", soma);
+        printf("%d\n", soma);
     } else { 
         printf("Valor inválido !\n");
     }
