@@ -1,6 +1,6 @@
 Para compilar o programa é preciso entrar no diretório 'src' (cd src) e digitar 'make' 
 para compilar os arquivos 'romano.cpp' e 'romanofunc.cpp'. Esses arquivos geram dois arquivos 
-objetos armazenados no diretório 'obj' e um executável 'romano' no diretório 'src'.
-Para compilar o arquivo de testes 'testa_romano.cpp' é preciso digitar 'make testa_romano' 
-no terminal. Isso irá gerar o executável 'testa_romano' no mesmo diretório.
+objetos armazenados no diretório 'obj' e um executável 'romano', no diretório 'src'.
+Para compilar o arquivo de testes, 'testa_romano.cpp', é preciso digitar 'make testa_romano' 
+no terminal, no diretório 'src'. Isso irá gerar o executável 'testa_romano' no mesmo diretório.
 O comando 'make clean' elimina os arquivos '.o' gerados na compilação. 

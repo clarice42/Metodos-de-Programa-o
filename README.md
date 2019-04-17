@@ -1,2 +1,9 @@
 # Trabalho1MP
-Trabalho pratico 1
+Trabalho pratico 1 de Métodos de Programação
+
+O trabalho foi desenvolvido baseado na metodologia de desenvolvimento orientado a testes(TDD). No arquivo 'testa_romano.cpp', no diretório 'teste', estão registrados todos os testes realizados. 
+Cada teste foi feito gradualmente, à medida que o trabalho avançava. O primeiro teste verifica se as letras convertidas em números arábicos, pela função 'converte', foram transformadas nos números corretos. 
+Sabemos que se um número romano for precedido por um número maior, como no caso de 'XVI', precisamos apenas somar os números correspondentes a cada letra, resultando em 16. O segundo teste foi desenvolvido a fim de verificar se essa soma correspondia ao real valor do número romano inserido pelo usuário. Da mesma forma, o terceiro teste verificava a subtração de números, como 'IV'. Os testes passaram, permitindo a continuidade do trabalho.
+Os últimos três testes foram desenvolvidos para identificar exceções. Números romanos inexistentes deveriam retornar valor inválido. Cada teste foi feito para sua função excecção correspondente. Para facilitar o entendimento do código foram criadas três funções, cada uma identificando uma possível exceção. Se o número for inválido, a função retorna o valor -1 e o teste verifica se o valor retornado era o esperado para aquele número.
+Os testes permitiram o melhor desenvolvimento do código. Um teste que não passava significava que a função não estava corretamente implementada ou a lógica estava incorreta. 
+O histórico do desenvolvimento do trabalho pode ser encontrado na página: "https://github.com/clarice42/Trabalho1MP".
