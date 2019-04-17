@@ -6,7 +6,8 @@
 
 int main() {
     char numero_romano[30];
-    int i, numero_correspondente[30], soma = 0, excecao1 = 0, excecao2 = 0;
+    int i, numero_correspondente[30], soma = 0;
+    int excecao1 = 0, excecao2 = 0, excecao3 = 0;
     scanf("%s", numero_romano);
     i = 0;
     while ((numero_romano[i] != '\0')&&(numero_romano[i] != '\n')) {
@@ -14,13 +15,14 @@ int main() {
         i++;
     }
     numero_correspondente[i++] = 0;  // O 0 indica o fim do vetor
-    excecao2 = verifica_excecao2(numero_correspondente);
     excecao1 = verifica_excecao1(numero_romano);
-    if ((excecao1 == 0) && (excecao2 ==0)) {  // sem excecoes, calcula a soma
+    excecao2 = verifica_excecao2(numero_correspondente);
+    excecao3 = verifica_excecao3(numero_correspondente);
+    if ((excecao1 == 0) && (excecao2 == 0) && (excecao3 == 0)) {
         soma = soma_romano(numero_correspondente);
         printf("%d\n", soma);
     } else {
-        printf("Valor inválido !\n");
+        printf("Numero inválido !\n");
     }
     return 0;
 }

@@ -75,6 +75,17 @@ TEST(excecoesTeste, numerosInvalidos2) {
     EXPECT_EQ(-1, verifica_excecao2(vetor3));
     EXPECT_EQ(-1, verifica_excecao2(vetor4));
 }
+/* Teste que verifica excecoes do tipo IIV e MDCM*/
+TEST(excecoesTeste, numerosInvalidos3) {
+    int vetor1[] = {1, 1, 5};
+    int vetor2[] = {100, 100, 1000};
+    int vetor3[] = {500, 100, 1000};
+    int vetor4[] = {1000, 100, 500, 1000};
+    EXPECT_EQ(-1, verifica_excecao3(vetor1));
+    EXPECT_EQ(-1, verifica_excecao3(vetor2));
+    EXPECT_EQ(-1, verifica_excecao3(vetor3));
+    EXPECT_EQ(-1, verifica_excecao3(vetor4));
+}
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
